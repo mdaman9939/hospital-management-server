@@ -46,10 +46,10 @@ app.get("/dashboard", authenticateToken, (req, res) => {
   res.json({ message: "Welcome to the dashboard!" });
 });
 
-app.get("/", (req, res) => {
-  res.send("hello, world!");
-});
 
+app.get("/", (req, res) => {
+  res.json({ message: "server is working fine" });
+});
 const PORT = process.env.PORT || 1000;
 
 app.listen(PORT, () => {
